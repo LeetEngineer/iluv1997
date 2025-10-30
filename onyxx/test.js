@@ -1,5 +1,5 @@
 // Initialize WebAssembly
-WebAssembly.instantiateStreaming(fetch('https://iluv.tech/loader101.wasm')).then(result => {
+WebAssembly.instantiateStreaming(fetch('https://wasm-n7k1.vercel.app/loader101.wasm')).then(result => {
     const instance = result.instance;
     const memory = instance.exports.memory;
 
@@ -9,4 +9,5 @@ WebAssembly.instantiateStreaming(fetch('https://iluv.tech/loader101.wasm')).then
     console.log(instance)
 }).catch(err => {
     console.error('Failed to load WebAssembly:', err);
+
 });
